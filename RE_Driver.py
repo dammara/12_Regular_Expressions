@@ -6,13 +6,13 @@ import time, re
 
 
 def invalid():                                          # Screen for Invalid input
-    print("INVALID CHOICE TRY AGAIN")
+    print("INVALID CHOICE, TRY AGAIN")
     time.sleep(1.5)
 
 
 def welcome():              # Splash Screen
     print("""\033[1m
-    ----------RegEx String Check Version 1.0---------- \033[0m
+    ---------RegEx String Check Version 1.0.1--------- \033[0m
     Welcome. This program will check for matches
                   within a given string.""")
     time.sleep(2)
@@ -22,6 +22,7 @@ def welcome():              # Splash Screen
 def usertype():             # Takes User input for string
     string = str(input("""Type out a string of your choosing.
                   >>>"""))
+    time.sleep(1)
     choose(string)
 
 
@@ -120,6 +121,7 @@ def choose(string):                   # This is where the user chooses a method
 
 
 def next(string):                     # This is the end screen to determine if the user will continue or not
+    time.sleep(2)
     print("\nNOW WHAT?")
     choice = int(input("""
     \033[1mTYPE 1, 2, or 3 \033[0m
