@@ -12,7 +12,7 @@ def invalid():                                          # Screen for Invalid inp
 
 def welcome():              # Splash Screen
     print("""\033[1m
-    ---------RegEx String Check Version 1.0.1--------- \033[0m
+    ---------RegEx String Check Version 1.0.2--------- \033[0m
     Welcome. This program will check for matches
                   within a given string.""")
     time.sleep(2)
@@ -105,11 +105,11 @@ def choose(string):                   # This is where the user chooses a method
             print("This string has no repeating letters")
         next(string)
     elif method == 9:                               # Checks for "Hello"
-        hcheck = bool(re.search(r'Hello', string))
+        hcheck = bool(re.match('Hello*', string))
         if hcheck == True:
-            print("This string has 'Hello' in it")
+            print("This string starts with 'Hello'")
         elif hcheck == False:
-            print("This string doesn't have 'Hello' in it")
+            print("This string doesn't start with 'Hello'")
         next(string)
     elif method == 10:                               # Checks for email addresses
         echeck = bool(re.search(r'\w+@\w+\.\w+', string))
